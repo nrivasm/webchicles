@@ -1,0 +1,17 @@
+.parallax {
+    background-image: url("https://sf-applications.s3.amazonaws.com/Bear/wallpapers/05/july-2020-wallpaper_desktop-3840x1600.png");
+  
+    height: 500px;
+  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.titulo {
+    margin: auto;
+    width: 50%;
+    padding: 250px;
+    text-align: center;
+}
