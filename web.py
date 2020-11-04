@@ -8,5 +8,9 @@ app.secret_key = "webchicles"
 def home():
     return render_template("index.html", page="home")
 
+@app.route("/About_Us/")
+def aboutus():
+    return render_template("aboutus.html", page="aboutus")
+
 if __name__ == "__main__":
     app.run(debug=True)
