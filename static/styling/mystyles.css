@@ -1,7 +1,6 @@
 .parallax {
-    background-image: url("https://previews.123rf.com/images/kebox/kebox1604/kebox160400048/56866292-fondo-con-los-c%C3%ADrculos-de-colores-sobre-fondo-negro.jpg");
-  
-    height: 610px;
+    background-image: url('../images/ezgif.com-resize.gif');
+    height: 670px;
   
     background-attachment: fixed;
     background-position: center;
@@ -21,30 +20,30 @@
 }
 
 .btn-outline-primary {
-  color: #ff5900;
-  border-color: #ff5900;
+  color: #9f9f9f;
+  border-color: #9f9f9f;
 }
 
 .btn-primary {
   color: #fff;
-  background-color: #ff5900;
-  border-color: #ff5900;
+  background-color: #9f9f9f;
+  border-color: #9f9f9f;
 }
 
 .btn-primary:hover {
   color: #FFFFFF;
-  background-color:#ff5900;
-  border-color: #ff5900;
+  background-color:#9f9f9f;
+  border-color: #9f9f9f;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #ff5900;
-  border-color: #ff5900;
+  background-color: #9f9f9f;
+  border-color: #9f9f9f;
 }
 
 .btn-outline-primary:hover {
   color: #FFFFFF;
-  background-color: #ff5900;
-  border-color: #ff5900;
+  background-color: #9f9f9f;
+  border-color: #9f9f9f;
 }
