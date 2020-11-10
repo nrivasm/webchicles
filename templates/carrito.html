@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head%}
+<title>Bubba Bombs - Carrito</title>
+{% endblock %}
+{% block body %}
+<div class="mr-1" style="text-align: left; padding:30px;">
+    <h1>Carrito</h1>
+    {% if items == 0 %}
+    <div style="text-align: center;">
+    <h3 style="text-align: center;">¡Vaya! Parece que tu carrito está vacío</h3>
+    <a href="/#products"><button class="btn btn-primary rounded-pill">¡Comprar ya!</button></a>
+    </div>
+    {% else %}
+    <ul class="pt-2 list-group">
+        {% for i in listacarrito %}
+        <li class="list-group-item">
+            <ul class="list-group list-group-horizontal-md">
+                <li class="list-group-item-noborder"><img height=30px width=height src="{{ url_for('static', filename=i.image_url) }}"></li>
+                <li class="ml-auto list-group-item-noborder"><b>{{ i.name }}</b></li>
+                <li class="ml-auto list-group-item-noborder">{{ i.description }}</li>
+                <li id="precio{{ listacarrito.index(i) }}" class="ml-auto list-group-item-noborder">{{ i.price }}€</li>
+                <li class="ml-auto list-group-item-noborder">
+                    <form>
+                        <div class="col-auto my-1">
+                        <select onchange="val{{ listacarrito.index(i) }}()" class="custom-select mr-sm-2" id="inlineFormCustomSelect{{ listacarrito.index(i) }}">
+                            <option value="0" selected>Cantidad</option>
+                            <option value="1">Bote (50uds.)</option>
+                            <option value="2">Caja (10uds.)</option>
+                        </select>
+                        </div>
+                      </form>
+                </li>
+                <a href="/Remove_from_cart_{{ i.name }}/"><li class="ml-auto list-group-item-noborder">Eliminar</li></a>
+            </ul>
+        </li>
+
+        <script>
+            function val{{ listacarrito.index(i) }}() {
+                d = document.getElementById("inlineFormCustomSelect{{ listacarrito.index(i) }}").value;
+                if (d == 0) { n = 1;}
+                if (d == 1) { n = 50;}
+                if (d == 2) { n = 10;}
+                document.getElementById('precio{{ listacarrito.index(i) }}').innerHTML = {{ i.price }}*n+"€";
+            }
+        </script>
+
+        {% endfor %}
+    </ul>
+    <div class="mb-4">
+        <a href="https://www.paypal.com/es/signin" target="_blank"><button type="button" class="float-right mt-2 btn btn-primary rounded-pill">Pagar</button></a>
+    </div>
+</div>
+{% endif %}
+</div>
+{% endblock %}
