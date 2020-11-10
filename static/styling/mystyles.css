@@ -8,6 +8,43 @@
     background-size: cover;
 }
 
+.bottom-right {
+  position: absolute;
+  top: 27px;
+  bottom: 0px;
+  right: 26px;
+}
+
+.bg-nav {
+  background: #d1d1d1  !important;
+}
+
+.list-group-item-noborder {
+  position: relative;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  background-color: #fff;
+  border: 0px solid rgba(0, 0, 0, 0.125);
+}
+
+@media (min-width: 576px) {
+  .card-deck {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: -45px;
+    margin-left: -45px;
+  }
+  .card-deck .card {
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin-right: 45px;
+    margin-bottom: 0;
+    margin-left: 45px;
+  }
+}
+
 .titulo {
     margin: auto;
     width: 50%;
